@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Bellefood Premium Dining</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #f5f5f5; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .orange-glow { box-shadow: 0 0 20px rgba(249, 115, 22, 0.2); }
+        .menu-card:hover img { transform: scale(1.1); }
+    </style>
+</head>
+
+<body class="pb-20">
+
+    <nav class="p-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center glass rounded-2xl px-5 py-4">
+            <a href="index.html" class="text-2xl font-bold tracking-tighter text-orange-500">BELLE<span class="text-white">FOOD</span></a>
+            <a href="index.html" class="flex items-center gap-2 text-sm uppercase tracking-widest hover:text-orange-500 transition">
+                <i data-lucide="arrow-left" class="w-4 h-4"></i> Back Home
+            </a>
+        </div>
+    </nav>
+
+    <header class="py-16 text-center">
+        <h1 class="text-6xl md:text-7xl font-bold mb-4">The <span class="text-orange-500">Menu</span></h1>
+        <p class="text-gray-400 max-w-xl mx-auto px-6">Every dish is prepared with premium ingredients, traditional secrets, and a touch of modern luxury.</p>
+    </header>
+
+    <main class="container mx-auto px-6 space-y-24">
+
+        <section>
+            <div class="flex items-center gap-4 mb-12">
+                <h2 class="text-4xl font-bold">Signature Mains</h2>
+                <div class="h-[1px] flex-grow bg-orange-500/30"></div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="menu-card glass rounded-3xl overflow-hidden group">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7bb7445?auto=format&fit=crop&q=80" class="w-full h-full object-cover transition duration-700">
+                        <div class="absolute top-4 right-4 bg-orange-600 px-3 py-1 rounded-full text-xs font-bold">Bestseller</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold">Smokey Jollof Platter</h3>
+                            <span class="text-orange-500 font-bold">₦8,500</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-6">Signature firewood-flavored rice, served with jumbo turkey, spicy dodo, and moin-moin.</p>
+                        <button onclick="orderViaWhatsApp('Smokey Jollof Platter', '8500')" class="w-full py-3 rounded-xl border border-white/10 hover:bg-orange-600 hover:border-orange-600 transition font-bold">Order Now</button>
+                    </div>
+                </div>
+
+                <div class="menu-card glass rounded-3xl overflow-hidden group">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&q=80" class="w-full h-full object-cover transition duration-700">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold">Asun Fried Rice</h3>
+                            <span class="text-orange-500 font-bold">₦9,000</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-6">Spicy basmati fried rice tossed with slow-roasted goat meat and bell peppers.</p>
+                        <button onclick="orderViaWhatsApp('Asun Fried Rice', '9000')" class="w-full py-3 rounded-xl border border-white/10 hover:bg-orange-600 hover:border-orange-600 transition font-bold">Order Now</button>
+                    </div>
+                </div>
+
+                <div class="menu-card glass rounded-3xl overflow-hidden group">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80" class="w-full h-full object-cover transition duration-700">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold">Grilled Croaker</h3>
+                            <span class="text-orange-500 font-bold">₦12,500</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-6">Large whole Croaker fish marinated in Chef Mitchy's secret spices, served with potato wedges.</p>
+                        <button onclick="orderViaWhatsApp('Grilled Croaker', '12500')" class="w-full py-3 rounded-xl border border-white/10 hover:bg-orange-600 hover:border-orange-600 transition font-bold">Order Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="flex items-center gap-4 mb-12">
+                <h2 class="text-4xl font-bold">Luxury Soups</h2>
+                <div class="h-[1px] flex-grow bg-orange-500/30"></div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="menu-card glass rounded-3xl overflow-hidden group">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?auto=format&fit=crop&q=80" class="w-full h-full object-cover transition duration-700">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold">Seafood Okra</h3>
+                            <span class="text-orange-500 font-bold">₦15,000</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-6">Premium okra soup loaded with prawns, calamari, crabs, and fish. Served with swallow of choice.</p>
+                        <button onclick="orderViaWhatsApp('Seafood Okra', '15000')" class="w-full py-3 rounded-xl border border-white/10 hover:bg-orange-600 hover:border-orange-600 transition font-bold">Order Now</button>
+                    </div>
+                </div>
+
+                <div class="menu-card glass rounded-3xl overflow-hidden group">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1512152272829-e3139592d56f?auto=format&fit=crop&q=80" class="w-full h-full object-cover transition duration-700">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold">Native Soup</h3>
+                            <span class="text-orange-500 font-bold">₦13,500</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-6">Traditional Rivers State style soup with periwinkles, fresh fish, and local spices.</p>
+                        <button onclick="orderViaWhatsApp('Native Soup', '13500')" class="w-full py-3 rounded-xl border border-white/10 hover:bg-orange-600 hover:border-orange-600 transition font-bold">Order Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="flex items-center gap-4 mb-12">
+                <h2 class="text-4xl font-bold">Refreshments</h2>
+                <div class="h-[1px] flex-grow bg-orange-500/30"></div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="menu-card glass rounded-3xl overflow-hidden group">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold">Hibiscus Ginger Zobo</h3>
+                            <span class="text-orange-500 font-bold">₦3,500</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-6">Cold-pressed hibiscus flowers, ginger, and honey. Refreshing and healthy.</p>
+                        <button onclick="orderViaWhatsApp('Zobo Infusion', '3500')" class="w-full py-2 rounded-lg bg-white/5 hover:bg-orange-600 transition text-sm">Add to Order</button>
+                    </div>
+                </div>
+
+                <div class="menu-card glass rounded-3xl overflow-hidden group">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold">Tigernut Milk (Kunu Aya)</h3>
+                            <span class="text-orange-500 font-bold">₦4,000</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-6">Freshly blended tigernuts and dates. A creamy, natural delight.</p>
+                        <button onclick="orderViaWhatsApp('Tigernut Milk', '4000')" class="w-full py-2 rounded-lg bg-white/5 hover:bg-orange-600 transition text-sm">Add to Order</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="mt-32 text-center text-gray-600 text-sm">
+        <p>&copy; 2026 Bellefood. Created for King Mitchy.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        function orderViaWhatsApp(name, price) {
+            const phoneNumber = "2348123456789";
+            const text = `*NEW MENU ORDER*%0A------------------%0AItem: ${name}%0APrice: ₦${price}%0A------------------%0APlease process this order.`;
+            window.open(`https://wa.me/${phoneNumber}?text=${text}`, '_blank');
+        }
+    </script>
+</body>
+</html>
